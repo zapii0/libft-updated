@@ -6,7 +6,7 @@
 /*   By: mzapora <mzapora@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:06:48 by mzapora           #+#    #+#             */
-/*   Updated: 2024/12/16 17:32:50 by mzapora          ###   ########.fr       */
+/*   Updated: 2025/04/28 18:04:31 by mzapora          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,18 @@
 # include <limits.h>
 # include <stdarg.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 30
+# endif
+
+# define OPENFD 1024
+
 typedef struct s_list
 {
 	void				*content;
 	struct s_list		*next;
 }		t_list;
+char	*ft_gnl_strjoin(char *s1, char *s2);
 int		ft_printf(const char *format, ...);
 int		ft_putstr_p(char *str);
 int		ft_putchar_p(int c);
